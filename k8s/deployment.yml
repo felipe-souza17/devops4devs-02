@@ -61,7 +61,7 @@ spec:
             - name: ASPNETCORE_HTTP_PORTS
               value: "8080"
             - name: ConnectionStrings__DefaultConnection
-              value: "Host=postgre;Database=reviewfilmes;Username=postgre;Password=postgre"
+              value: "Host=postgre;Database=reviewfilmes;Username=postgres;Password=postgres"
           ports:
             - containerPort: 8080
 ---
@@ -74,5 +74,5 @@ spec:
     app: reviewfilmes
   ports:
     - port: 80
-      targetPort: 8080
+      nodePort: 30000
   type: NodePort
