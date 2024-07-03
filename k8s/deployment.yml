@@ -26,3 +26,14 @@ spec:
               value: reviewfilmes
           ports:
             - containerPort: 5432
+---
+# Deployment do Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgre
+spec:
+  selector:
+    app: postgre
+  ports:
+    - port: 5432
