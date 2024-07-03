@@ -45,7 +45,7 @@ kind: Deployment
 metadata:
   name: reviewfilmes
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: reviewfilmes
@@ -56,7 +56,7 @@ spec:
     spec:
       containers:
         - name: reviewfilmes
-          image: flpsouza17/review-filmes:v1
+          image: flpsouza17/review-filmes:v2
           env:
             - name: ASPNETCORE_HTTP_PORTS
               value: "8080"
